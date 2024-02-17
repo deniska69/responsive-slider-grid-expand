@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  max-width: 1120px;
+}
+
+.expand-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.expand-button.expand > #text-without-expand {
+  display: none;
+}
+
+.expand-button.expand > img {
+  transform: rotate(180deg);
+}
+
+.expand-button:not(.expand) > #text-with-expand {
+  display: none;
+}
+
+.swiper {
+  width: 320px;
+  height: 180px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+@media (min-width: 321px) {
+  .expand-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119.99px) {
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .swiper-wrapper div:nth-child(n + 7) {
+    display: none;
+  }
+
+  .expand div:nth-child(n + 7) {
+    display: flex;
+  }
+
+  .swiper-slide,
+  .swiper-slide > img {
+    width: 224px;
+    height: 72px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .swiper-wrapper div:nth-child(n + 9) {
+    display: none;
+  }
+
+  .expand div:nth-child(n + 9) {
+    display: flex;
+  }
+
+  .swiper-slide,
+  .swiper-slide > img {
+    width: 224px;
+    height: 72px;
+  }
+}
