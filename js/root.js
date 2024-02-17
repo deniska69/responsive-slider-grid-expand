@@ -2,7 +2,7 @@
 const width = window.innerWidth;
 
 // Initialize Swiper
-if (width < 321) {
+if (width < 768) {
   var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
