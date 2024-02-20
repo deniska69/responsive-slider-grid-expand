@@ -23,16 +23,8 @@ body {
   outline: inherit;
 }
 
-.expand-button.expand > #text-without-expand {
-  display: none;
-}
-
 .expand-button.expand > img {
   transform: rotate(180deg);
-}
-
-.expand-button:not(.expand) > #text-with-expand {
-  display: none;
 }
 
 .swiper {

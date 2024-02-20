@@ -11,17 +11,20 @@ if (width < 768) {
 }
 
 // Handle onclick expand button
-const EXPAND_BUTTON = document.querySelector(".expand-button");
-const SWIPER_WRAPPER = document.querySelector(".swiper-wrapper");
+const expandButton = document.querySelector(".expand-button");
+const textButton = document.querySelector(".expand-button-text");
+const swiperWrapper = document.querySelector(".swiper-wrapper");
 
-EXPAND_BUTTON.addEventListener("click", () => {
-  const isExpand = EXPAND_BUTTON.classList.contains("expand");
+expandButton.addEventListener("click", () => {
+  const isExpand = expandButton.classList.contains("expand");
 
   if (isExpand) {
-    EXPAND_BUTTON.classList.remove("expand");
-    SWIPER_WRAPPER.classList.remove("expand");
+    expandButton.classList.remove("expand");
+    swiperWrapper.classList.remove("expand");
+    textButton.innerHTML = "Показать все";
   } else {
-    EXPAND_BUTTON.classList.add("expand");
-    SWIPER_WRAPPER.classList.add("expand");
+    expandButton.classList.add("expand");
+    swiperWrapper.classList.add("expand");
+    textButton.innerHTML = "Скрыть";
   }
 });
