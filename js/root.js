@@ -8,6 +8,12 @@ if (width < 768) {
       el: ".swiper-pagination",
     },
   });
+
+  var swiper_2 = new Swiper(".mySwiperSecond", {
+    pagination: {
+      el: ".wrap-2 .swiper-pagination",
+    },
+  });
 }
 
 // Handle onclick expand button

@@ -1,7 +1,10 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   max-width: 100vw;
+  align-items: center;
+  row-gap: 5rem;
 }
 
 .wrap {
